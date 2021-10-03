@@ -1,27 +1,43 @@
 .footer {
   background: #2f303a;
-  margin: auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  margin: 0 auto;
+  // padding-top: 60px;
+  // padding-bottom: 60px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .container-footer {
-  width: 1200px;
+  max-width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: unset;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
 }
 
 .footer-left {
-  display: block;
+  margin-top: 60px;
 }
 
 .footer-logo {
-  margin-top: 60px;
-  margin-bottom: 20px;
+  // margin-top: 60px;
+  // margin-bottom: 20px;
   font-family: Raleway, sans-serif;
   font-size: 26px;
   line-height: 1.19;
@@ -34,14 +50,19 @@
 
 .address {
   margin-top: 20px;
-  margin-right: 70px;
+  // margin-right: 70px;
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    margin-bottom: 60px;
+  }
 }
 
 .address-list__item {
-  margin-top: 9px;
+  margin-top: 8px;
 }
 
 .address__link {
@@ -57,6 +78,14 @@
 }
 
 /* Присоединяйтесь */
+.footer-socials {
+  margin-top: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
 .footer-socials-title {
   font-size: 14px;
   line-height: 1.14;
@@ -67,6 +96,7 @@
 
 .footer-socials__list {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -99,7 +129,8 @@
 
 /* Подпишитесь на рассылку */
 .subscribe {
-  margin-left: 93px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .form-title {
@@ -112,18 +143,23 @@
 
 .subscribe-form {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: unset;
+    justify-content: center;
+  }
 }
 
 .subscribe-input {
-  width: 358px;
+  max-width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: transparent;
-  margin-right: 12px;
+  margin-bottom: 20px;
   padding-left: 16px;
   color: #ffffff;
   &:focus {
@@ -136,6 +172,16 @@
     align-items: center;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 

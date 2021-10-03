@@ -14,8 +14,8 @@
 
 .modal {
   position: absolute;
-  width: 528px;
-  min-height: 581px;
+  width: 100vw;
+  height: 100vh;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -24,6 +24,16 @@
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 30px;
+
+  @media screen and (min-width: 480px) {
+    max-width: 450px;
+    max-height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    max-height: 581px;
+  }
 }
 
 .btn-modal {
@@ -89,14 +99,14 @@
   padding-left: 42px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:focus {
-      outline: none;
-      border: 1px solid #2196f3;
-      border-radius: 4px;
-    }
-    &:focus + .modal-form-icon {
-      fill: #2196f3;
-    }
+  &:focus {
+    outline: none;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+  }
+  &:focus + .modal-form-icon {
+    fill: #2196f3;
+  }
 }
 
 .modal-form-icon {
@@ -116,17 +126,17 @@
   padding: 12px 16px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &::placeholder {
-      font-size: 14px;
-      line-height: 1.14;
-      letter-spacing: 0.01em;
-      color: rgba(117, 117, 117, 0.5);
-    }
-    &:focus {
-      outline: none;
-      border: 1px solid #2196f3;
-      border-radius: 4px;
-    }
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+  }
 }
 
 .modal-form-check {

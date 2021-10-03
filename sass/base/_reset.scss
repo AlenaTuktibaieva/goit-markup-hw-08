@@ -1,5 +1,5 @@
 body {
-  font-family: Roboto, sans-serif;
+  font-family: $primaryFont;
   letter-spacing: 0.03em;
   font-style: normal;
   font-weight: 400;
@@ -24,6 +24,8 @@ ul {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .list {
